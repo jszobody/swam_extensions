@@ -9,7 +9,7 @@ Thanks to Nuppet for original shield timer UI and idea. https://pastebin.com/01Z
 	// Settings
 	const DEFAULT_SETTINGS = {
 		isShieldSpawnedEnabled: true,
-		isTeamChatEnabled: true,
+		isTeamChatEnabled: false,
 		teamChatUpdateIntervals: '100,30,10'
 	};
 
@@ -212,7 +212,7 @@ Thanks to Nuppet for original shield timer UI and idea. https://pastebin.com/01Z
 		sendTeamChat() {
 			const message = MESSAGES.TIMER_UPDATED(this.secondsLeft);
 
-			if(!!this.secondsLeft) Network.sendTeam(message);
+			//if(!!this.secondsLeft) Network.sendTeam(message);
 		}
 
 		toggleTeamChat() {
@@ -238,7 +238,7 @@ Thanks to Nuppet for original shield timer UI and idea. https://pastebin.com/01Z
 				message = MESSAGES.TIMER_UPDATED(secondsLeft);
 			}
 
-			if(!!message) Network.sendTeam(message);
+			//if(!!message) Network.sendTeam(message);
 		}
 	}
 
